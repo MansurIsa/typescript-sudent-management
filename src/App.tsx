@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid } from '@mui/material';
+import StudentsTable from './components/StudentsTable';
+import LessonsTable from './components/LessonsTable';
+import ScoresTable from './components/ScoresTable';
+import StudentForm from './forms/StudentForm';
+import LessonForm from './forms/LessonForm';
+import ScoreForm from './forms/ScoreForm';
 
-function App() {
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Container>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+          <h2>Students</h2>
+          <StudentForm />
+          <StudentsTable />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <h2>Lessons</h2>
+          <LessonForm />
+          <LessonsTable />
+        </Grid>
+        <Grid item xs={12}>
+          <h2>Scores</h2>
+          <ScoreForm />
+          <ScoresTable />
+        </Grid>
+      </Grid>
+    </Container>
+
   );
-}
+};
 
 export default App;
