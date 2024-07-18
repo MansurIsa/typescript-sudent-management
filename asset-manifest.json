@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/typescript-sudent-management/static/js/main.ebffbc8a.js",
+    "index.html": "/typescript-sudent-management/index.html",
+    "main.ebffbc8a.js.map": "/typescript-sudent-management/static/js/main.ebffbc8a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ebffbc8a.js"
+  ]
+}
