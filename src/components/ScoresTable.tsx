@@ -17,6 +17,10 @@ const ScoresTable: React.FC = () => {
     dispatch(deleteScore(id));
   };
 
+  const handleEdit = (id: number) => {
+    setEditScoreId(id);
+  };
+
   return (
     <div>
       <Table>
@@ -48,7 +52,7 @@ const ScoresTable: React.FC = () => {
               <TableCell>{score.dateTime}</TableCell>
               <TableCell>{score.score}</TableCell>
               <TableCell>
-                <Button onClick={() => setEditScoreId(score.id)}>Edit</Button>
+                <Button onClick={() => handleEdit(score.id)}>Edit</Button>
                 <Button onClick={() => handleDelete(score.id)}>Delete</Button>
               </TableCell>
             </TableRow>
